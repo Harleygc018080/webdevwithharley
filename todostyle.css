@@ -1,0 +1,223 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-style: italic;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #1E90FF;
+}
+
+.limiter {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #1C1C1C;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row {
+  zoom: 1;
+}
+
+.col-1-2 {
+  float: left;
+  padding: 10px;
+  width: 50%;
+}
+
+.col-1-4 {
+  float: left;
+  padding: 10px;
+  width: 25%;
+}
+
+.insert {
+  position: relative;
+  padding: 20px;
+  background-color: #1C1C1C;
+  border-top: solid 1px #333;
+}
+
+#js-insert {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  border: 1px solid #333;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #1C1C1C;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#js-toggle-all {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.bar {
+  color: #ffffff;
+  background-color: #1C1C1C;
+  border-top: solid 1px #333;
+  border-bottom: solid 1px #333;
+}
+
+.info {
+  float: left;
+  width: 33%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.info:last-child {
+  text-align: right;
+}
+
+.total {
+  display: inline-block;
+  float: left;
+  margin-top: 4px;
+}
+
+.filter {
+  text-align: center;
+}
+
+.filter li {
+  display: inline-block;
+}
+
+.button {
+  display: inline-block;
+  margin: 0 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  background-color: #000000;
+}
+
+.button.selected {
+  color: #000000;
+  background-color: #1E90FF;
+  border-color: #1E90FF;
+}
+
+.button--clear {
+  float: right;
+  color: #ffffff;
+  background-color: #FF4136;
+  border-color: #FF4136;
+}
+
+.list {
+  background-color: #000000;
+}
+
+.list li {
+  padding: 15px 20px;
+  border-bottom: solid 1px #333;
+  list-style: none;
+  color: #ffffff;
+}
+
+.list li:hover .destroy {
+  display: inline-block;
+}
+
+.todo span {
+  display: block;
+  margin-left: 30px;
+  font-size: 18px;
+  transition: color 0.3s ease-out;
+}
+
+.completed .todo span {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+.toggle {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  appearance: none;
+  outline: none;
+}
+
+.edit {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #1C1C1C;
+  border: 1px solid #333;
+  box-shadow: none;
+}
+
+.editing .edit {
+  display: block;
+}
+
+.editing .todo {
+  visibility: hidden;
+}
+
+.destroy {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  color: #FF4136;
+  cursor: pointer;
+}
+
+.destroy:hover {
+  color: #FF0000;
+}
